@@ -61,11 +61,23 @@ header{
 /* 学習時間３項目 */
 .study__hour{
     display: flex;
+    gap: 20px;
 }
 .study__hour__box{
     background-color: aqua;
 }
 
+
+
+/* 学習言語と学習コンテンツ */
+
+.lang__and__contents__box{
+    display: flex;
+    gap: 20px;
+}
+.contents__box{
+    background-color: aqua;
+}
 /* フッターここから */
 
 .footer{

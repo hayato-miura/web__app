@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
     <!-- ヘッダーここから---------------------------------------------------------------------------- -->
@@ -16,12 +17,39 @@
                     <img src="./assets/logo.svg" alt="posse">
                 </div>
                 <div class="header__week">4th week</div>
-                <div class="header__btn">記録・投稿</div>
+                <div class="header__btn modal-open">記録・投稿</div>
         </div>
     </header>
     <!-- ヘッダーここまで -->
     <!-- モーダルここから -->
-    <div class="modal-cantainer"></div>
+    <div class="modal-container">
+        <div class="modal-body">
+            <!-- 閉じるボタン -->
+            <div class="modal-close">×</div>
+            <!-- モーダル内のコンテンツ -->
+            <div class="modal-content">
+                <p>文章が入ります。</p>
+                <div class="upside">
+                    <div class="modal__left">
+                        <div class="study__date">学習日</div>
+                        <div class="study__contents">学習コンテンツ(複数選択可)</div>
+                        <div class="study__lang">学習言語(複数選択可)</div>
+                    </div>
+                    <div class="modal__right">
+                        <div class="study__time"></div>
+                        <div class="study__twitter__comment"></div>
+                        <div class="twitter__share"></div>
+                    </div>
+                </div>
+                <div class="bottomside">
+                    <div class="submit__button">
+                        記録・投稿
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- モーダルここまで -->
     <div class="wrapper">
         <aside></aside>
@@ -48,7 +76,11 @@
                         </div>
                     </div>
                     <!-- 学習時間のグラフ -->
-                    <div class="study__hour__graph"></div>
+                    <div class="study__hour__graph">
+                        <div class="container" style="width:100%" align='center'>
+                            <canvas id="canvas"></canvas>
+                        </div>
+                    </div>
                 </div>
                 <!-- 学習時間３項目と学習時間のグラフのセクション ここまで-->
                 <!-- 学習言語と学習コンテンツのセクション ここから-->
@@ -56,13 +88,20 @@
                     <!-- 学習言語のセクション -->
                     <div class="contents__box lang ">
                         <div class="subheading">学習言語</div>
-                        <div class="pie__chart">棒グラフ</div>
+                        <div class="pie__chart">
+                            <canvas id="myDoughnutChart1">
+                            </canvas>
+                        </div>
                         <div class="study__content__list">リスト部分</div>
                     </div>
                     <!-- 学習コンテンツのセクション -->
                     <div class=" contents__box study__contents">
                         <div class="subheading">学習言語</div>
-                        <div class="pie__chart">棒グラフ</div>
+                        <div class="pie__chart">
+                            <!-- 2個目の円グラフはid名を変えてまた同様に作成すればいい -->
+                            <canvas id="myDoughnutChart2">
+                            </canvas>
+                        </div>
                         <div class="study__content__list">リスト部分</div>
                     </div>
                 </div>
@@ -75,5 +114,9 @@
         <p>フッター</p>
     </footer>
     <!-- フッターここまで -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js"></script>
+    <script src="./script/common.js"></script>
+    <script src="./script/main.js"></script>
 </body>
 </html>

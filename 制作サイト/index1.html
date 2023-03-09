@@ -36,19 +36,54 @@
             <div class="modal-content">
                 <div class="upside">
                     <div class="modal__left">
-                        <div class="study__date">学習日
+                        <div class="study__date">
+                            学習日
                             <!-- 学習日カレンダー -->
                             <div>
                                 <label class="date-edit"><input type="date" value="2019-08-22" /></label>
                             </div>
                         </div>
-                        <div class="study__contents">学習コンテンツ(複数選択可)</div>
+                        <div class="study__contents">
+                            学習コンテンツ(複数選択可)
+                            <div class="check__btn__list__box">
+                                <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">N予備校</span></label>
+                            </div>
+                            <div class="check__btn__list__box">
+                                <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">N予備校</span></label>
+                            </div>
+                            <div class="check__btn__list__box">
+                                <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">N予備校</span></label>
+                            </div>
+                        </div>
                         <div class="study__lang">学習言語(複数選択可)</div>
+                        <div class="check__btn__list__box">
+                            <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">HTML</span></label>
+                        </div>
+                        <div class="check__btn__list__box">
+                            <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">CSS</span></label>
+                        </div>
+                        <div class="check__btn__list__box">
+                            <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">JavaScript</span></label>
+                        </div>
                     </div>
                     <div class="modal__right">
-                        <div class="study__time">学習時間</div>
-                        <div class="study__twitter__comment">Twitter用コメント</div>
-                        <div class="twitter__share">Twitterにシェアする</div>
+                        <div class="study__time">
+                            学習時間
+                            <form action="#" method="post">
+                                <div class="comment__form"><input type="number" placeholder="数字を入力" required></div>
+                            </form>
+                        </div>
+                        <div class="study__twitter__comment">
+                            Twitter用コメント
+                            <form action="#" method="post" class="comment__form">
+                                <textarea name="comment" placeholder="コメントを入力" rows="4" cols="20"></textarea>
+                            </form>
+                        </div>
+                        <div class="twitter__share">
+                            <div class="check__btn__list__box">
+                                <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">Twitterにシェアする</span></label>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="bottomside">
@@ -78,14 +113,14 @@
                         </div>
                         <div class="study__hour__box study__hour__month">
                             <div class="study__hour__container">
-                                <div class="study__hour__subheading">Today</div>
+                                <div class="study__hour__subheading">Month</div>
                                 <div class="study__hour__number">3</div>
                                 <div class="study__hour__unit">hour</div>
                             </div>
                         </div>
                         <div class=" study__hour__box study__hour__total">
                             <div class="study__hour__container">
-                                <div class="study__hour__subheading">Today</div>
+                                <div class="study__hour__subheading">Total</div>
                                 <div class="study__hour__number">3</div>
                                 <div class="study__hour__unit">hour</div>
                             </div>
@@ -127,7 +162,7 @@
     </div>
 <!-- フッターここから -->
     <footer class="footer">
-        <p>フッター</p>
+        <p>2020年10月</p>
     </footer>
     <!-- フッターここまで -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

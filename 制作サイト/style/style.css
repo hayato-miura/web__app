@@ -10,7 +10,7 @@
     
 }
 body{
-    background-color: #f5f5f8;
+    background-color: #ededf0;
     display: flex;
     flex-direction: column;
 }
@@ -111,13 +111,30 @@ header{
     margin: 0 10px 0 10px;
 }
 
+
+
 /* 学習時間３項目 */
 .study__hour{
     display: flex;
     gap: 20px;
 }
 .study__hour__box{
-    background-color: aqua;
+    background-color: white;
+    border-radius: 11px;
+}
+.study__hour__container{
+    margin: 10px;
+}
+/* テキストに対して */
+.study__hour__subheading{
+    color: #0f71bc;
+    font-size: 21px;
+}
+.study__hour__number{
+    font-weight: bold;
+}
+.study__hour__unit{
+    opacity: 0.5;
 }
 
 

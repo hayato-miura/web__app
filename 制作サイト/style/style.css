@@ -26,6 +26,8 @@ main{
 /* ヘッダー----------------------------------------------------------------------- */
 header{
     background-color: lightgreen;
+    height: 60px;
+    line-height: 60px;
 }
 .site-header__wrapper {
     display: contents;
@@ -37,6 +39,10 @@ header{
     justify-content: space-between;
 }
 
+.header__btn{
+    background-image: linear-gradient(90deg, rgba(65, 164, 253, 1), rgba(14, 244, 255, 1));
+    border-radius: 21px;
+}
 /* モーダル-------------------------------------------------------------------------- */
 /*モーダルを開くボタン*/
 .modal-open{
@@ -260,6 +266,71 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     width: fit-content;
 }
 
+/* モーダルの下側 */
+
+/* モーダルローディング画面 */
+.button {
+    background-image: linear-gradient(90deg, rgba(65, 164, 253, 1), rgba(14, 244, 255, 1));
+    border-radius: 21px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+  }
+  .button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 160px;
+    height: 40px;
+    background-color: black;
+    z-index: -1;
+    left: calc(50% - 80px);
+    top: 10px;
+    opacity: 0.3;
+    filter: blur(5px);
+    transition: all 0.2s ease-out;
+  }
+  .button:hover::after {
+    opacity: 0.5;
+    filter: blur(20px);
+    transform: translatey(10px) scalex(1.2);
+  }
+  .button:active {
+    background-color: #dd4b4b;
+  }
+  .button:active::after {
+    opacity: 0.3;
+  }
+  .loading {
+    border-radius: 50px;
+    width: 50px;
+    left: calc(50vw - 25px);
+  }
+  .button.loading::after {
+    width: 40px;
+    left: 5px;
+    top: 12px;
+    border-radius: 100%;
+  }
+  .spinner {
+    display: block;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    /* top: 8px; */
+    /* left: calc(50% - 17px); */
+    background: transparent;
+    box-sizing: border-box;
+    border-top: 4px solid #0f71bc;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-radius: 100%;
+    animation: spin 0.6s ease-out infinite;
+  }
+  @keyframes spin {
+    100% {transform: rotate(360deg)}
+  }
 
 
 /* 学習時間３項目 */
@@ -286,6 +357,12 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     opacity: 0.5;
 }
 
+/* 学習時間グラフ */
+.study__hour__graph{
+    background-color: white;
+    border-radius: 21px;
+}
+
 
 
 /* 学習言語と学習コンテンツ */
@@ -296,6 +373,27 @@ input[type="date"]::-webkit-calendar-picker-indicator{
 }
 .contents__box{
     background-color: aqua;
+}
+
+
+/* 学習言語 */
+.study__lang__list{
+    position: relative;
+    display: flex;
+    width: fit-content;
+}
+.study__lang__list li{
+    margin-left: 20px;
+}
+.study__lang__list li:nth-child(1)::before {
+        content: "";
+        position: absolute;
+        top: .4em;
+        left: 9px;
+        width: 10px;
+        height: 10px;
+        background-color: #8b6b4e;
+        border-radius: 50%;
 }
 /* ドーナツグラフ */
 

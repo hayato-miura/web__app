@@ -16,7 +16,7 @@ body{
 }
 main{
     display: flex;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     margin: 0;
     right: 0px;
 }
@@ -129,7 +129,8 @@ header{
     flex:1;
     background-color: lightskyblue;
     text-align: center;
-    margin: 0 10px 0 10px;
+    margin: 20px 10px 0 10px;
+    height: 527px;
 }
 
 /* 学習日カレンダー */
@@ -336,14 +337,17 @@ input[type="date"]::-webkit-calendar-picker-indicator{
 /* 学習時間３項目 */
 .study__hour{
     display: flex;
+    justify-content: center;
     gap: 20px;
 }
 .study__hour__box{
     background-color: white;
     border-radius: 11px;
+    width: 157px;
+    height: 100px;
 }
 .study__hour__container{
-    margin: 10px;
+    margin: 19px;
 }
 /* テキストに対して */
 .study__hour__subheading{
@@ -361,6 +365,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{
 .study__hour__graph{
     background-color: white;
     border-radius: 21px;
+    margin-top: 20px;
 }
 
 
@@ -373,6 +378,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{
 }
 .contents__box{
     background-color: aqua;
+    border-radius: 21px;
 }
 
 
@@ -386,15 +392,54 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     margin-left: 20px;
 }
 .study__lang__list li:nth-child(1)::before {
-        content: "";
-        position: absolute;
-        top: .4em;
-        left: 9px;
-        width: 10px;
-        height: 10px;
-        background-color: #8b6b4e;
-        border-radius: 50%;
+    content: "";
+    position: absolute;
+    /* top: 0.2em; */
+    /* left: 9px; */
+    width: 11px;
+    height: 14px;
+    background-color: #0345ec;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translateX(-12px);
 }
+.study__lang__list li:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    /* top: 0.2em; */
+    /* left: 9px; */
+    width: 11px;
+    height: 14px;
+    background-color: #0f71bd;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translateX(-12px);
+}
+.study__lang__list li:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    /* top: 0.2em; */
+    /* left: 9px; */
+    width: 11px;
+    height: 14px;
+    background-color: #20bdde;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translateX(-12px);
+}
+.study__lang__list li:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    /* top: 0.2em; */
+    /* left: 9px; */
+    width: 11px;
+    height: 14px;
+    background-color: #3ccefe;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translateX(-12px);
+}
+
 /* ドーナツグラフ */
 
 

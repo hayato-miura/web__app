@@ -76,19 +76,25 @@
                         <div class="study__twitter__comment">
                             Twitter用コメント
                             <form action="#" method="post" class="comment__form">
-                                <textarea name="comment" placeholder="コメントを入力" rows="4" cols="20"></textarea>
+                                
+                                <textarea name="comment" placeholder="コメントを入力" rows="4" cols="20" id="content"></textarea>
                             </form>
                         </div>
-                        <div class="twitter__share">
+                        <div class="twitter__share" id="twiiter__share">
                             <div class="check__btn__list__box">
                                 <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">Twitterにシェアする</span></label>
                             </div>
+                            <!--入力フォーム-->
+                            <!-- <input type="text" id="content"> -->
+<!--ご自身のTwitterアカウントへ行きます-->
+                            
                         </div>
                     </div>
                 </div>
                 <div class="bottomside">
                     <div class="submit__button">
-                        <button class="button">記録・投稿</button>
+                        <button class="button btn" id="twitter" >
+                            記録・投稿</button>
                     </div>
                 </div>
             </div>

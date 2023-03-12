@@ -83,6 +83,42 @@ var barChartData = {
     }
   });
 
+
+  // プラグインの関数定義
+//   var dataLabelPlugin = {
+//     afterDatasetsDraw: function (chart, easing) {
+//       // To only draw at the end of animation, check for easing === 1
+//       var ctx = chart.ctx;
+
+//       chart.data.datasets.forEach(function (dataset, i) {
+//           var meta = chart.getDatasetMeta(i);
+//           if (!meta.hidden) {
+//               meta.data.forEach(function (element, index) {
+//                   // Draw the text in black, with the specified font
+//                   ctx.fillStyle = 'rgb(0, 0, 0)';
+
+//                   var fontSize = 16;
+//                   var fontStyle = 'normal';
+//                   var fontFamily = 'Helvetica Neue';
+//                   ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+
+//                   // Just naively convert to string for now
+//                   var dataString = dataset.data[index].toString();
+
+//                   // Make sure alignment settings are correct
+//                   ctx.textAlign = 'center';
+//                   ctx.textBaseline = 'middle';
+
+//                   var padding = 5;
+//                   var position = element.tooltipPosition();
+//                   ctx.fillText(dataString, position.x, position.y - (fontSize / 2) - padding);
+//               });
+//           }
+//       });
+//   }
+// };
+
+
   var ctx = document.getElementById("myDoughnutChart2");
   var myDoughnutChart2= new Chart(ctx, {
     type: 'doughnut',
@@ -95,17 +131,22 @@ var barChartData = {
             "#20bdde",
             "#3cccefe"
           ],
-          data: [45, 32, 18, 5] //グラフのデータ
+          data: [45, 32, 18, 5] ,
+          //グラフのデータ
+          // plugins: [dataLabelPlugin]
       }]
     },
     options: {
+      legend: {
+        position: 'bottom',
+      },
       title: {
         display: true,
         //グラフタイトル
         text: '新法案賛否'
       }
     }
-  });
+    });
 
 
 
@@ -122,3 +163,15 @@ button.click(function() {
     button.toggleClass('loading').html("Load");
   }
 }) 
+
+// twitter入力フォーム
+// twitter共有機能
+        document.getElementById("twitter").addEventListener('click', function(event) {
+        event.preventDefault();
+        var left = Math.round(window.screen.width / 2 - 275);
+        var top = (window.screen.height > 420) ? Math.round(window.screen.height / 2 - 210) : 0;
+        window.open(
+            "https://twitter.com/intent/tweet?text=" + encodeURIComponent(document.getElementById("content").value),
+            null,
+            "scrollbars=yes,resizable=yes,toolbar=no,location=yes,width=550,height=420,left=" + left + ",top=" + top);
+    });

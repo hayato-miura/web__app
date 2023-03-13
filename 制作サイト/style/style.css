@@ -357,12 +357,12 @@ input[type="date"]::-webkit-calendar-picker-indicator{
 }
 .study__hour__box{
     background-color: white;
-    border-radius: 11px;
+    border-radius: 21px;
     width: 157px;
-    height: 100px;
+    height: 120px;
 }
 .study__hour__container{
-    margin: 19px;
+    margin: 31px;
 }
 /* テキストに対して */
 .study__hour__subheading{
@@ -454,6 +454,8 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     z-index: 0;
     transform: translateX(-12px);
 }
+
+
 
 /* ドーナツグラフ */
 

@@ -41,8 +41,14 @@ var barChartData = {
             ticks: {
               suggestedMin: 0,
               suggestedMax: 8,
-              stepSize: 2
+              stepSize: 2,
+              callback: function(tick) {
+                return tick.toString() + 'h';
+              }
             }
+            
+
+            
           }]
         }
       }
@@ -80,6 +86,19 @@ var barChartData = {
       legend:{
         display:false
       },
+      responsive: false,
+        // plugins: {
+        //     datalabels: {
+        //         color: '#000',
+        //         font: {
+        //             weight: 'bold',
+        //             size: 20,
+        //         },
+        //         formatter: (value) => {
+        //             return value + '%';
+        //         }
+        //     }
+        // }
     }
   });
 
@@ -162,16 +181,26 @@ button.click(function() {
   else {
     button.toggleClass('loading').html("Load");
   }
-}) 
+}) ;
 
 // twitter入力フォーム
+
+
+
+
+
+const twitterShareBtn = document.querySelector('.twitter-share-btn'); 
+const twitterShare = document.getElementById("twitter")
 // twitter共有機能
-        document.getElementById("twitter").addEventListener('click', function(event) {
-        event.preventDefault();
-        var left = Math.round(window.screen.width / 2 - 275);
-        var top = (window.screen.height > 420) ? Math.round(window.screen.height / 2 - 210) : 0;
-        window.open(
-            "https://twitter.com/intent/tweet?text=" + encodeURIComponent(document.getElementById("content").value),
-            null,
-            "scrollbars=yes,resizable=yes,toolbar=no,location=yes,width=550,height=420,left=" + left + ",top=" + top);
-    });
+
+twitterShare.addEventListener('click', function(event) {
+  event.preventDefault();
+  var left = Math.round(window.screen.width / 2 - 275);
+  var top = (window.screen.height > 420) ? Math.round(window.screen.height / 2 - 210) : 0;
+  if(twitterShareBtn.checked){
+    window.open(
+      "https://twitter.com/intent/tweet?text=" + encodeURIComponent(document.getElementById("content").value),
+      null,
+      "scrollbars=yes,resizable=yes,toolbar=no,location=yes,width=550,height=420,left=" + left + ",top=" + top);
+  };
+});

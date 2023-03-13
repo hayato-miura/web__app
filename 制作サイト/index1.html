@@ -80,9 +80,9 @@
                                 <textarea name="comment" placeholder="コメントを入力" rows="4" cols="20" id="content"></textarea>
                             </form>
                         </div>
-                        <div class="twitter__share" id="twiiter__share">
+                        <div class="twitter__share" id="twitter__share">
                             <div class="check__btn__list__box">
-                                <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">Twitterにシェアする</span></label>
+                                <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input twitter-share-btn" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">Twitterにシェアする</span></label>
                             </div>
                             <!--入力フォーム-->
                             <!-- <input type="text" id="content"> -->
@@ -93,7 +93,7 @@
                 </div>
                 <div class="bottomside">
                     <div class="submit__button">
-                        <button class="button btn" id="twitter" >
+                        <button class="button btn" id="twitter"   >
                             記録・投稿</button>
                     </div>
                 </div>
@@ -181,6 +181,8 @@
     <!-- フッターここまで -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js"></script>
+    <!-- datalabelsプラグインを呼び出す
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script> -->
     <script src="./script/common.js"></script>
     <script src="./script/main.js"></script>
 </body>

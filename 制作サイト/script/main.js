@@ -87,18 +87,28 @@ var barChartData = {
         display:false
       },
       responsive: false,
-        // plugins: {
-        //     datalabels: {
-        //         color: '#000',
-        //         font: {
-        //             weight: 'bold',
-        //             size: 20,
-        //         },
-        //         formatter: (value) => {
-        //             return value + '%';
-        //         }
-        //     }
-        // }
+      // tooltips: {
+      //   callbacks: {
+      //     label: function (tooltipItem, data) {
+      //       return data.labels[tooltipItem.index]
+      //         + ": "
+      //         + data.datasets[0].data[tooltipItem.index]
+      //         + " %"; //ここで単位を付けます
+      //     }
+      //   }
+      // }
+        plugins: {
+            datalabels: {
+                color: '#000',
+                font: {
+                    weight: 'bold',
+                    size: 20,
+                },
+                formatter: (value) => {
+                    return value + '%';
+                }
+            }
+        }
     }
   });
 

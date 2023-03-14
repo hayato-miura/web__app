@@ -82,10 +82,10 @@ header{
     gap: 20px;
 }
 .modal__left{
-    background-color: lightblue;
+    background-color: white;
 }
 .modal__right{
-    background-color: wheat;
+    background-color: white;
 }
 .bottomside{
     display: flex;
@@ -139,10 +139,13 @@ header{
 }
 .content{
     flex:1;
-    background-color: lightskyblue;
+    background-color: #ededf0;
     text-align: center;
     margin: 20px 10px 0 10px;
     height: 527px;
+}
+.study__lang__list.active{
+    display: none;
 }
 
 /* 学習日カレンダー */
@@ -392,7 +395,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     font-weight: bold;
 }
 .study__hour__unit{
-    opacity: 0.5;
+    color: grey;
 }
 
 /* 学習時間グラフ */

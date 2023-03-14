@@ -198,6 +198,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{
   
 
     /* 学習言語リスト */
+
     .check__btn__list__box{
         display: flex;
     }

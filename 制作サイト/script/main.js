@@ -72,7 +72,7 @@ var barChartData = {
               "#0345ec",
               "#0f71bd",
               "#20bdde",
-              "#3cccefe"
+              "#3ccefe"
           ],
           data: [45, 32, 18, 5] //グラフのデータ
       }]

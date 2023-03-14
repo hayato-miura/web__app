@@ -87,18 +87,18 @@ var barChartData = {
         display:false
       },
       responsive: false,
-        // plugins: {
-        //     datalabels: {
-        //         color: '#000',
-        //         font: {
-        //             weight: 'bold',
-        //             size: 20,
-        //         },
-        //         formatter: (value) => {
-        //             return value + '%';
-        //         }
-        //     }
-        // }
+        plugins: {
+            datalabels: {
+                color: '#000',
+                font: {
+                    weight: 'bold',
+                    size: 20,
+                },
+                formatter: (value) => {
+                    return value + '%';
+                }
+            }
+        }
     }
   });
 
@@ -172,11 +172,20 @@ var barChartData = {
 
 //  モーダルローディング
 var button = $('.button'),
+    loadComp = $('.load__complete__box'),
     spinner = '<span class="spinner"></span>';
+
+
 
 button.click(function() {
   if (!button.hasClass('loading')) {
     button.toggleClass('loading').html(spinner);
+    $(function () { 
+      setTimeout(function () { 
+        button.addClass('load__complete');
+        loadComp.addClass('load__complete');
+       },3000);
+     });
   }
   else {
     button.toggleClass('loading').html("Load");

@@ -345,6 +345,17 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     100% {transform: rotate(360deg)}
   }
 
+.load__complete__box{
+    display: none;
+  }
+.button.load__complete{
+    display: none;
+}
+.load__complete__box.load__complete{
+    display: block;
+}
+
+
 
 
 

@@ -134,7 +134,7 @@ header{
 
 /* コンテンツ */
 .content-area{
-    display: flex;
+    display: grid;
     flex: 1;
 }
 .content{
@@ -344,7 +344,10 @@ input[type="date"]::-webkit-calendar-picker-indicator{
   @keyframes spin {
     100% {transform: rotate(360deg)}
   }
-
+.load__complete__img{
+    width: 132px;
+    height: 115px;
+}
 .load__complete__box{
     display: none;
   }
@@ -354,6 +357,10 @@ input[type="date"]::-webkit-calendar-picker-indicator{
 .load__complete__box.load__complete{
     display: block;
 }
+.upside.load__complete{
+    display: none;
+}
+
 
 
 
@@ -481,3 +488,15 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     text-align: center;
     background-color: #eee;
 }
+
+
+
+
+
+
+/* SPスマホ版のサイト作り */
+@media (min-width: 768px){
+    .content-area {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
